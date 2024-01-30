@@ -1,0 +1,33 @@
+//2288. El caballo de John Carter
+#include <iostream>
+#include <stdio.h>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+
+
+    int P, S, B;
+    scanf("%d %d %d", &P, &S, &B);
+
+    string cad;
+    cin >> cad;
+
+    int T = 0;
+
+    for(int i =0; i < cad.size(); i++) {
+        if(cad[i] ==  47 ) {
+            T += S;
+        } else if( cad[i] == 92  ) {
+             T += B;
+        } else if( cad[i] == 45 ) {
+            T += P;
+        }
+    }
+
+    printf("%d\n", T);
+
+ return 0;
+}
